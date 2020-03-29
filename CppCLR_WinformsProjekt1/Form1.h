@@ -1,6 +1,7 @@
 #pragma once
 
 #include <stdlib.h>
+#include <stdio.h>
 
 namespace CppCLRWinformsProjekt {
 
@@ -106,9 +107,7 @@ namespace CppCLRWinformsProjekt {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			//this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(Image::FromFile("C:\\Users\\gallo\\source\\repos\\CppCLR_WinformsProjekt1\\bliss.jpg")));
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(Image::FromFile("bliss.jpg")));
-			//this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject("IDR_JPG1"))); 
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(308, 261);
 			this->Controls->Add(this->label1);
