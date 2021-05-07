@@ -57,7 +57,6 @@ namespace CppCLRWinformsProjekt {
 		/// </summary>
 		void InitializeComponent(void)
 		{
-			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Form1::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -97,17 +96,16 @@ namespace CppCLRWinformsProjekt {
 			// label1
 			// 
 			this->label1->AutoSize = true;
-			this->label1->Location = System::Drawing::Point(96, 37);
+			this->label1->Location = System::Drawing::Point(85, 36);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(111, 13);
+			this->label1->Size = System::Drawing::Size(135, 13);
 			this->label1->TabIndex = 3;
-			this->label1->Text = L"Happy Birthday, Mom!";
+			this->label1->Text = L"Happy Mother\'s Day, Mom!";
 			// 
 			// Form1
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(Image::FromFile("bliss.jpg")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(308, 261);
 			this->Controls->Add(this->label1);

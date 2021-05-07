@@ -28,13 +28,13 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MothersDay.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
     <ClCompile Include="AssemblyInfo.cpp">
       <Filter>Source</Filter>
     </ClCompile>
     <ClCompile Include="Form1.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="MothersDay.cpp">
       <Filter>Source</Filter>
     </ClCompile>
   </ItemGroup>
@@ -43,9 +43,6 @@
       <Filter>Resources</Filter>
     </Image>
     <Image Include="..\Debug\bliss.jpg">
-      <Filter>Resources</Filter>
-    </Image>
-    <Image Include="bliss.jpg">
       <Filter>Resources</Filter>
     </Image>
   </ItemGroup>
