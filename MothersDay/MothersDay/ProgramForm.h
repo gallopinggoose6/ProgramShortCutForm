@@ -1,7 +1,5 @@
 #pragma once
 
-#include <stdlib.h>
-
 namespace MothersDay {
 
 	using namespace System;
@@ -111,14 +109,31 @@ namespace MothersDay {
 
 		}
 #pragma endregion
-	private: System::Void button1_Click(System::Object^ sender, System::EventArgs^ e) {
-		system("\"\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" \"login.live.com\"\"");
+	System::Void MothersDay::ProgramForm::button1_Click(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			Diagnostics::ProcessStartInfo^ psi = gcnew System::Diagnostics::ProcessStartInfo();
+			psi->FileName = "C:\\Program Files\\Mozilla\ Firefox\\firefox.exe";
+			psi->Arguments = "login.live.com";
+			Diagnostics::Process::Start(psi);
+		}
+		catch (...) {}
 	}
-	private: System::Void button3_Click(System::Object^ sender, System::EventArgs^ e) {
-		system("\"C:\\Program Files\\Microsoft Office 15\\root\\office15\\winword.exe\"");
+	System::Void MothersDay::ProgramForm::button3_Click(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			Diagnostics::ProcessStartInfo^ psi = gcnew System::Diagnostics::ProcessStartInfo();
+			psi->FileName = "C:\\Program Files\\Microsoft Office 15\\root\\office15\\winword.exe";
+			Diagnostics::Process::Start(psi);
+		}
+		catch (...) {}
 	}
-	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
-		system("\"\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" \"facebook.com\"\"");
+	System::Void MothersDay::ProgramForm::button2_Click(System::Object^ sender, System::EventArgs^ e) {
+		try {
+			Diagnostics::ProcessStartInfo^ psi = gcnew System::Diagnostics::ProcessStartInfo();
+			psi->FileName = "C:\\Program Files\\Mozilla\ Firefox\\firefox.exe";
+			psi->Arguments = "facebook.com";
+			Diagnostics::Process::Start(psi);
+		}
+		catch (...) {}
 	}
 
 	private: System::Windows::Forms::Button^ button1;

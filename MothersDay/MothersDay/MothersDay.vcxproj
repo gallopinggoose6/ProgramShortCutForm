@@ -131,11 +131,18 @@
     <ClInclude Include="ProgramForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ProgramForm.resx">
       <DependentUpon>ProgramForm.h</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="MothersDay.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="cthulu.ico" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
