@@ -1,9 +1,8 @@
 #pragma once
 
 #include <stdlib.h>
-#include <stdio.h>
 
-namespace CppCLRWinformsProjekt {
+namespace MothersDay {
 
 	using namespace System;
 	using namespace System::ComponentModel;
@@ -13,42 +12,30 @@ namespace CppCLRWinformsProjekt {
 	using namespace System::Drawing;
 
 	/// <summary>
-	/// Zusammenfassung für Form1
+	/// Summary for ProgramForm
 	/// </summary>
-	public ref class Form1 : public System::Windows::Forms::Form
+	public ref class ProgramForm : public System::Windows::Forms::Form
 	{
 	public:
-		Form1(void)
+		ProgramForm(void)
 		{
 			InitializeComponent();
 			//
-			//TODO: Konstruktorcode hier hinzufügen.
+			//TODO: Add the constructor code here
 			//
 		}
 
 	protected:
 		/// <summary>
-		/// Verwendete Ressourcen bereinigen.
+		/// Clean up any resources being used.
 		/// </summary>
-		~Form1()
+		~ProgramForm()
 		{
 			if (components)
 			{
 				delete components;
 			}
 		}
-	private: System::Windows::Forms::Button^ button1;
-	protected:
-	private: System::Windows::Forms::Button^ button2;
-	private: System::Windows::Forms::Button^ button3;
-	private: System::Windows::Forms::Label^ label1;
-
-
-	private:
-		/// <summary>
-		/// Erforderliche Designervariable.
-		/// </summary>
-		System::ComponentModel::Container ^components;
 
 #pragma region Windows Form Designer generated code
 		/// <summary>
@@ -57,6 +44,7 @@ namespace CppCLRWinformsProjekt {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(ProgramForm::typeid));
 			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->button2 = (gcnew System::Windows::Forms::Button());
 			this->button3 = (gcnew System::Windows::Forms::Button());
@@ -71,7 +59,7 @@ namespace CppCLRWinformsProjekt {
 			this->button1->TabIndex = 0;
 			this->button1->Text = L"Outlook Mail";
 			this->button1->UseVisualStyleBackColor = true;
-			this->button1->Click += gcnew System::EventHandler(this, &Form1::button1_Click);
+			this->button1->Click += gcnew System::EventHandler(this, &ProgramForm::button1_Click);
 			// 
 			// button2
 			// 
@@ -81,7 +69,7 @@ namespace CppCLRWinformsProjekt {
 			this->button2->TabIndex = 1;
 			this->button2->Text = L"Facebook";
 			this->button2->UseVisualStyleBackColor = true;
-			this->button2->Click += gcnew System::EventHandler(this, &Form1::button2_Click);
+			this->button2->Click += gcnew System::EventHandler(this, &ProgramForm::button2_Click);
 			// 
 			// button3
 			// 
@@ -91,7 +79,7 @@ namespace CppCLRWinformsProjekt {
 			this->button3->TabIndex = 2;
 			this->button3->Text = L"Word";
 			this->button3->UseVisualStyleBackColor = true;
-			this->button3->Click += gcnew System::EventHandler(this, &Form1::button3_Click);
+			this->button3->Click += gcnew System::EventHandler(this, &ProgramForm::button3_Click);
 			// 
 			// label1
 			// 
@@ -102,10 +90,11 @@ namespace CppCLRWinformsProjekt {
 			this->label1->TabIndex = 3;
 			this->label1->Text = L"Happy Mother\'s Day, Mom!";
 			// 
-			// Form1
+			// ProgramForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(308, 261);
 			this->Controls->Add(this->label1);
@@ -114,7 +103,8 @@ namespace CppCLRWinformsProjekt {
 			this->Controls->Add(this->button1);
 			this->Cursor = System::Windows::Forms::Cursors::Hand;
 			this->FormBorderStyle = System::Windows::Forms::FormBorderStyle::FixedSingle;
-			this->Name = L"Form1";
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->Name = L"ProgramForm";
 			this->Text = L"Activity Launcher";
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -130,5 +120,18 @@ namespace CppCLRWinformsProjekt {
 	private: System::Void button2_Click(System::Object^ sender, System::EventArgs^ e) {
 		system("\"\"C:\\Program Files\\Mozilla Firefox\\firefox.exe\" \"facebook.com\"\"");
 	}
-};
+
+	private: System::Windows::Forms::Button^ button1;
+	protected:
+	private: System::Windows::Forms::Button^ button2;
+	private: System::Windows::Forms::Button^ button3;
+	private: System::Windows::Forms::Label^ label1;
+
+
+	private:
+		/// <summary>
+		/// Erforderliche Designervariable.
+		/// </summary>
+		System::ComponentModel::Container^ components;
+	};
 }

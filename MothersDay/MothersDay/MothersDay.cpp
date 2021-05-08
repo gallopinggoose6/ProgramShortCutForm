@@ -5,7 +5,7 @@ using namespace System;
 //    return 0;
 //}
 
-#include "Form1.h"
+#include "ProgramForm.h"
 
 using namespace System::Windows::Forms;
 
@@ -13,6 +13,6 @@ using namespace System::Windows::Forms;
 int main() {
 	Application::EnableVisualStyles();
 	Application::SetCompatibleTextRenderingDefault(false);
-	Application::Run(gcnew CppCLRWinformsProjekt::Form1()); 
+	Application::Run(gcnew MothersDay::ProgramForm()); 
 	return 0;
 }
